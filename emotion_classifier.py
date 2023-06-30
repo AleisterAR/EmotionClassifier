@@ -1,4 +1,4 @@
-import cv2
+from cv2 import cv2
 from PIL import Image, ImageOps
 import numpy as np
 from keras.models import model_from_json
