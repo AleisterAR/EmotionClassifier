@@ -1,9 +1,7 @@
-from opencv-python import cv2
-from PIL import Image, ImageOps
+import cv2
 import numpy as np
 from keras.models import model_from_json
 import streamlit as st
-import base64
 
 emotion_dict = {0: "Angry", 1: "Happy", 2: "Neutral", 3: "Sad"}
 
