@@ -28,7 +28,7 @@ elif add_select == "Emotion Detection":
     frame_placeholder = st.empty()
     start_button_pressed = st.button("Start")
     stop_button_pressed = st.button("Stop")
-    while start_button_pressed and not stop_button_pressed:
+    while start_button_pressed and:
         ret, frame = cap.read()
         if not ret:
             st.write("The video capture has ended")
