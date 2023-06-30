@@ -30,9 +30,6 @@ elif add_select == "Emotion Detection":
     stop_button_pressed = st.button("Stop")
     while start_button_pressed:
         ret, frame = cap.read()
-        if not ret:
-            st.write("The video capture has ended")
-            break
         frame = cv2.resize(frame, (1280, 720))
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
