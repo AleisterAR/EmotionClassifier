@@ -28,8 +28,12 @@ elif add_select == "Emotion Detection":
     frame_placeholder = st.empty()
     start_button_pressed = st.button("Start")
     stop_button_pressed = st.button("Stop")
-    while start_button_pressed:
+    while start_button_pressed and not stop_button_pressed:
         ret, frame = cap.read()
+        if not ret:
+            st.write("The video capture has ended")
+            break
+        frame = cv2.resize(frame, (1280, 720))
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
