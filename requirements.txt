@@ -1,5 +1,6 @@
-opencv-python
-streamlit
-numpy
-tensorflow
-keras
+opencv-python==4.8.0.74
+opencv-contrib-python==4.8.0.74
+streamlit==1.24.0
+numpy==1.25.0
+tensorflow==2.12.0
+keras==2.13.1
